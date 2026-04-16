@@ -10,11 +10,11 @@ hooks:
           command: "bash \"${CLAUDE_PLUGIN_ROOT:-$HOME/.claude/skills/skill-optimizer}/scan.sh\" 2>/dev/null"
 metadata:
   version: "1.0.0"
-  author: "skill-optimizer"
-  github: "https://github.com/YOUR_USERNAME/skill-optimizer"
+  author: "Stel"
+  github: "https://github.com/Stel777/Skill-Optimizer"
 ---
 
-# Skill Optimizer
+# Skill Optimizer by Stel
 
 Scans your available Claude skills and add-ons at the start of a new project, then recommends which ones are relevant — explaining where and why they'd be used — before building begins.
 
