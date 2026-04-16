@@ -1,6 +1,8 @@
 #!/bin/bash
 # ─────────────────────────────────────────────────────────────────────────────
-# skill-optimizer — scan.sh
+# Skill Optimizer by Stel
+# https://github.com/Stel777/Skill-Optimizer
+#
 # Scans available skills and add-ons and injects them as context for Claude
 # to analyze and recommend at the start of a new project.
 #
