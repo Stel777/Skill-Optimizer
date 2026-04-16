@@ -69,7 +69,7 @@ This gives you a clear picture of your current tool stack mid-build, and a chanc
 ### Option 1: Clone from GitHub
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/skill-optimizer ~/.claude/skills/skill-optimizer
+git clone https://github.com/Stel777/Skill-Optimizer ~/.claude/skills/skill-optimizer
 ```
 
 ### Option 2: Manual Install
