@@ -47,13 +47,22 @@ export SKILL_OPTIMIZER_ADDONS_DIR="/path/to/your/addons"
 
 ## Manual Invocation
 
-You can also call this skill manually at any time:
+You can call this skill manually at any time:
 
 ```
 /skill-optimizer
 ```
 
-When invoked manually, Claude will scan your skills and add-ons and present recommendations for the current project context.
+### Mid-Project Status Update
+
+When invoked manually during an active project, Claude will provide a status update:
+
+1. **What's active** — which skills and add-ons have been used or loaded in this session
+2. **Where** — the specific parts of the project they were applied to
+3. **Why** — the reason each tool was relevant to that part of the build
+4. **What's available but unused** — skills/add-ons that were not used, with a note on whether they could still be helpful
+
+This gives you a clear picture of your current tool stack mid-build, and a chance to activate anything you may have missed.
 
 ## Setup
 
