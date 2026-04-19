@@ -9,7 +9,7 @@ hooks:
         - type: command
           command: "bash \"${CLAUDE_PLUGIN_ROOT:-$HOME/.claude/skills/skill-optimizer}/scan.sh\" 2>/dev/null"
 metadata:
-  version: "1.0.0"
+  version: "2.1.0"
   author: "Stel"
   github: "https://github.com/Stel777/Skill-Optimizer"
 ---
@@ -55,14 +55,14 @@ You can call this skill manually at any time:
 
 ### Mid-Project Status Update
 
-When invoked manually during an active project, Claude will provide a status update:
+When invoked manually during an active project:
 
-1. **What's active** — which skills and add-ons have been used or loaded in this session
-2. **Where** — the specific parts of the project they were applied to
-3. **Why** — the reason each tool was relevant to that part of the build
-4. **What's available but unused** — skills/add-ons that were not used, with a note on whether they could still be helpful
+1. **Read the cache file** at `~/.claude/skill-optimizer-cache.md` — this is the source of truth for what skills and add-ons are available. If the cache doesn't exist (project predates v2), fall back to session memory.
+2. **Report what's active** — which skills and add-ons from the cache have been used or loaded in this session, and where/why
+3. **Report what's available but unused** — skills/add-ons in the cache that haven't been activated yet, with a note on whether they could still be helpful given the current project context
+4. **Ask** if the user wants to activate anything they've missed
 
-This gives you a clear picture of your current tool stack mid-build, and a chance to activate anything you may have missed.
+This gives you a clear, accurate picture of your full tool stack mid-build without triggering any re-scanning.
 
 ## Setup
 
